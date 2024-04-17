@@ -82,11 +82,11 @@
         //     window.location.href = links[i]
         // }))
 
-        portfolios.map((e,i) => {
-            e.addEventListener('click', () => {
-                console.log('포트폴리오 클릭' + i);
-            })
-        })
+        Array.from(portfolios).forEach((e, i) => {
+    e.addEventListener('click', () => {
+        console.log('포트폴리오 클릭' + i);
+    });
+});
 
     </script>
 </body>
