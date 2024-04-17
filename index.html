@@ -33,7 +33,7 @@
         }
 
         li {
-            style : none;
+            list-style : none;
         }
     </style>
 </head>
@@ -52,7 +52,7 @@
         <h2>포트폴리오</h2>
         <div>
             <img src="" alter="Flutter 로고" />
-            <ul>
+            <ul id="portfolio">
                 <li>게시판 구현</li>
                 <li>이동수단 매칭 어플</li>
                 <li>점심식사 메뉴 추첨기</li>
@@ -68,5 +68,26 @@
     <footer>
         <p>&copy; 2024 My Single Page Website</p>
     </footer>
+    <script>
+        const portfolios = document.querySelector("#portfolio").getElementsByTagName('li')
+
+        const links= [
+            '1.html',
+            '2.html',
+            '3.html',
+            '4.html'
+        ]
+
+        // portfolios.map((e,i) => e.addEventListener('click', () => {
+        //     window.location.href = links[i]
+        // }))
+
+        portfolios.map((e,i) => {
+            e.addEventListener('click', () => {
+                console.log('포트폴리오 클릭' + i);
+            })
+        })
+
+    </script>
 </body>
 </html>
